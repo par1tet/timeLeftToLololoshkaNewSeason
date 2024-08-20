@@ -9,7 +9,7 @@ function App() {
     const [seconds, setSeconds] = useState(Math.floor(difference / 1000 % 60))
     const [minutes, setMinutes] = useState(Math.floor(difference / 1000 / 60 % 60))
     const [hours, setHours] = useState(Math.floor(difference / 1000 / 60 / 60 % 24))
-    const [days, setDays] = useState(Math.floor(difference / 1000 / 60 / 60) / 24)
+    const [days, setDays] = useState(Math.floor(difference / 1000 / 60 / 60/ 24))
   useEffect(() => {
     setInterval(() => {
       const now = new Date();
@@ -17,7 +17,7 @@ function App() {
       setSeconds(Math.floor(difference / 1000 % 60))
       setMinutes(Math.floor(difference / 1000 / 60 % 60))
       setHours(Math.floor(difference / 1000 / 60 / 60 % 24))
-      setDays(Math.floor(difference / 1000 / 60 / 60) / 24)
+      setDays(Math.floor(difference / 1000 / 60 / 60 / 24))
     }, 1000)
   }, [])
   return (
